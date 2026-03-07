@@ -1,59 +1,47 @@
-# Angular
+# DeployWise — Angular Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A production-ready Angular starter, pre-configured for one-click deployment to your VPS with [DeployWise](https://deploywise.dev).
 
-## Development server
+## What's Included
 
-To start a local development server, run:
+- Angular 21 with TypeScript
+- Angular CLI configured
+- Optimized for Nginx static hosting or PM2 SSR
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Quick Start
 
 ```bash
-ng generate component component-name
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Open [http://localhost:4200](http://localhost:4200).
 
-```bash
-ng generate --help
+## Deploy with DeployWise
+
+1. Push this repo to GitHub
+2. Open [deploywise.dev/dashboard](https://deploywise.dev/dashboard)
+3. Add your VPS → Create a project → Select this repo
+4. Click **Deploy**
+
+DeployWise automatically runs `ng build`, serves the `dist/` output via Nginx, and issues a free SSL certificate.
+
+## Project Structure
+
+```
+├── src/
+│   ├── app/          # Components and modules
+│   ├── index.html    # Entry HTML
+│   └── main.ts       # Bootstrap
+├── angular.json      # Angular CLI config
+└── package.json
 ```
 
-## Building
+## Learn More
 
-To build the project run:
+- [DeployWise Docs](https://deploywise.dev/docs)
+- [Angular Documentation](https://angular.dev)
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Deployed with [DeployWise](https://deploywise.dev) — free, open source.
